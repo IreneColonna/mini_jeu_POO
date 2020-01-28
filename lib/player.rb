@@ -44,14 +44,12 @@ class HumanPlayer < Player
 	end
 
 	def show_state
-	  "#{@name} a #{@life_points} points de vie et une arme de niveau #{@weapon_level}"
+	  puts "#{@name} a #{@life_points} points de vie et une arme de niveau #{@weapon_level}"
 	end
 
 	def compute_damage
 		rand(1..6) * @weapon_level
 	end
-
-end
 
   def search_weapon
 	  new_weapon_level = rand(1..6)
@@ -59,7 +57,7 @@ end
 		if new_weapon_level > @weapon_level
 			@weapon_level = new_weapon_level
 		else
-			puts "M@*#$... elle n'est pas mieux que ton arme actuelle..."
+			puts "Merde... elle n'est pas mieux que ton arme actuelle..."
 		end
 	end
 
@@ -84,3 +82,4 @@ end
 		end
 	end
 
+end
